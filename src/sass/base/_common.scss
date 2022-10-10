@@ -1,0 +1,18 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  margin: 0;
+
+  font-family: 'Stolzl', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+
+
+  background-color: var(--main-white-color);
+  overflow-x: hidden;
+
+  @include mq(desk) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
