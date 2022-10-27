@@ -61,3 +61,42 @@
 
 //   console.log(`test(${levels}) ---->`, maxAmountGrain);
 //   return maxAmountGrain;
+
+function loadGrain(levels) {
+  let l = 0;
+  let r = levels.length - 1;
+  let currentLevel = 0;
+  let totalGrain = 0;
+
+  if (
+    levels.length <= 2 ||
+    levels[0] < levels[1] ||
+    levels[1] > levels[levels.length - 1] ||
+    levels.length === 0
+  ) {
+    console.log(`early return(${levels})---->`, totalGrain);
+
+    return totalGrain;
+  }
+
+  while (l < r) {
+    if (levels[l] < levels[r]) {
+      if (levels[l] > currentLevel) currentLevel = levels[l];
+      else totalGrain += currentLevel - levels[l];
+      l += 1;
+    } else {
+      if (levels[r] > currentLevel) currentLevel = levels[r];
+      else totalGrain += currentLevel - levels[r];
+      r -= 1;
+    }
+  }
+  console.log(`return(${levels}) ---->`, totalGrain);
+  return totalGrain;
+}
+
+loadGrain([4, 1, 3]);
+loadGrain([2, 1, 5, 2, 7, 4, 10]);
+loadGrain([2, 0, 1, 5, 2, 7]);
+loadGrain([2, 4, 2]);
+loadGrain([3, 7]);
+loadGrain([]);
