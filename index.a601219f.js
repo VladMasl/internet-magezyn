@@ -1,0 +1,2 @@
+!function(){function n(n){var e=0,t=n.length-1,o=0,r=0;if(n.length<=2||n[0]<n[1]||n[1]>n[n.length-1]||0===n.length)return console.log("early return(".concat(n,")----\x3e"),r),r;for(;e<t;)n[e]<n[t]?(n[e]>o?o=n[e]:r+=o-n[e],e+=1):(n[t]>o?o=n[t]:r+=o-n[t],t-=1);return console.log("return(".concat(n,") ----\x3e"),r),r}n([4,1,3]),n([2,1,5,2,7,4,10]),n([2,0,1,5,2,7]),n([2,4,2]),n([3,7]),n([])}();
+//# sourceMappingURL=index.a601219f.js.map

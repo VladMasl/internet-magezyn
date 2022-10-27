@@ -1,0 +1,2 @@
+function e(e){let n=0,l=e.length-1,r=0,t=0;if(e.length<=2||e[0]<e[1]||e[1]>e[e.length-1]||0===e.length)return console.log(`early return(${e})----\x3e`,t),t;for(;n<l;)e[n]<e[l]?(e[n]>r?r=e[n]:t+=r-e[n],n+=1):(e[l]>r?r=e[l]:t+=r-e[l],l-=1);return console.log(`return(${e}) ----\x3e`,t),t}e([4,1,3]),e([2,1,5,2,7,4,10]),e([2,0,1,5,2,7]),e([2,4,2]),e([3,7]),e([]);
+//# sourceMappingURL=index.29c9ff12.js.map
